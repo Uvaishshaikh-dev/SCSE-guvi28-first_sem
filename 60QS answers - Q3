@@ -1,1 +1,30 @@
+#include <stdio.h>
 
+int main() {
+
+    short a;
+    long long b;
+
+    printf("Enter a short integer : ");
+    scanf("%hd", &a);
+
+    printf("Enter a long long integer : ");
+    scanf("%lld", &b);
+
+    if (a == 0) {          \\checking if input is zero or not
+        printf("Error: Division by zero is not allowed.\n");
+        return 1;
+    }
+
+    long long sum = a + b;
+    long long difference = b - a;
+    long long product = a * b;
+    long long division = b / a;
+
+    printf("Sum : %lld\n", sum);
+    printf("Difference : %lld\n", difference);
+    printf("Product : %lld\n", product);
+    printf("Division : %lld\n", division);
+
+    return 0;
+}
