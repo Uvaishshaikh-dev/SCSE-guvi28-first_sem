@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    short shortI;
+    long long longlongI;
+    short sum;
+    long long product,division,difference;
+    printf("Enter short integer: ");
+    scanf("%hd", &shortI);
+    printf("Enter long long integer: ");
+    scanf("%lld", &longlongI);
+
+     sum = shortI + longlongI; 
+     product = shortI * longlongI; 
+     division = longlongI/ shortI;
+     difference = longlongI-shortI;
+    printf("Short Integer: %hd \n", shortI);
+    printf("Long Long Integer: %lld \n", longlongI);
+    printf("Sum : %hd \n", sum);
+    printf("Product : %lld \n", product);
+    printf("divison : %lld \n",division);
+    printf("Difference : %lld \n", difference);
+    return 0;
+}
