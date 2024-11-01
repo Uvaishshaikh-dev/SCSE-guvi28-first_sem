@@ -1,0 +1,53 @@
+#include <stdio.h>
+
+int main() {
+    char x;
+    float amt;
+    int acc, from_acc, to_acc;
+    char f_name_loc[100],l_name_loc[100];
+    printf("Enter Transaction Type: (D=deposit,W=Withdrawal,T=Transfer)" );
+    scanf("%c",&x);
+    
+    switch (x) {
+        case 'D':
+            printf("Enter Deposition amount: ");
+            scanf("%f", &amt);
+            printf("Enter the account number: ");
+            scanf("%d", &acc);
+            printf("Transaction Type : Deposit\n");
+            printf("Account Number : %d\n", acc);
+            printf("Amount deposited : %f\n",amt);
+            break;
+
+        case 'W':
+            printf("Enter Withdrawal amount: ");
+            scanf("%f", &amt);
+            printf("Enter the account number: ");
+            scanf("%d", &acc);
+            printf("Enter the first and last name of ATM location: ");
+            scanf("%s %s", &f_name_loc, &l_name_loc); 
+            printf("Transaction Type : Withdrawal\n");
+            printf("Account Number : %d\n", acc);
+            printf("Withdrawal Amount : %f\n",amt);
+            printf("ATM location : %s%s\n", f_name_loc, l_name_loc);
+            break;
+
+        case 'T':
+            printf("Enter Transfer amount: ");
+            scanf("%f", &amt);
+            printf("Enter the from account number: ");
+            scanf("%d", &from_acc);
+            printf("Enter the to account number: ");
+            scanf("%d", &to_acc);
+            printf("Transaction Type : Transfer\n");
+            printf("From Account Number : %d\n", from_acc);
+            printf("To Account Number : %d\n", to_acc);
+            printf("Transfer Amount : %f\n",amt);
+            break;
+
+        default:
+            printf("Invalid transaction type.Enter D,W,T. \n");
+            break;
+    }
+    return 0;
+}
